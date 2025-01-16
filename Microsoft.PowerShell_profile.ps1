@@ -38,7 +38,7 @@ if ([bool]([System.Security.Principal.WindowsIdentity]::GetCurrent()).IsSystem) 
 }
 
 # Initial GitHub.com connectivity check with 1 second timeout
-$global:canConnectToGitHub = Test-Connection github.com -Count 1 -Quiet -TimeoutSeconds 1
+$global:canConnectToGitHub = Test-Connection github.com -Count 1 -Quiet
 
 # Import Modules and External Profiles
 # Ensure Terminal-Icons module is installed before importing
@@ -441,7 +441,6 @@ $PSReadLineOptions = @{
     PredictionViewStyle = 'ListView'
     BellStyle = 'None'
 }
-Set-PSReadLineOption @PSReadLineOptions
 
 # Custom key handlers
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
@@ -465,7 +464,7 @@ Set-PSReadLineOption -AddToHistoryHandler {
 
 # Improved prediction settings
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
-Set-PSReadLineOption -MaximumHistoryCount 10000
+
 
 # Custom completion for common commands
 $scriptblock = {
