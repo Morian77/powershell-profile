@@ -463,7 +463,7 @@ Set-PSReadLineOption -AddToHistoryHandler {
 }
 
 # Improved prediction settings
-Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+# Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 
 
 # Custom completion for common commands
