@@ -442,6 +442,8 @@ $PSReadLineOptions = @{
     BellStyle = 'None'
 }
 
+Set-PSReadLineOption @PSReadLineOptions
+
 # Custom key handlers
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
