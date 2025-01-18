@@ -441,7 +441,6 @@ $PSReadLineOptions = @{
     PredictionViewStyle = 'ListView'
     BellStyle = 'None'
 }
-
 Set-PSReadLineOption @PSReadLineOptions
 
 # Custom key handlers
